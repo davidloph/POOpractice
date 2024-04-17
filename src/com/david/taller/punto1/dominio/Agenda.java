@@ -6,11 +6,11 @@ import java.util.List;
 public class Agenda {
     private List<Contacto> contactos;
     public Agenda(){
-        this,contactos = new ArrayList<>();
+        this.contactos = new ArrayList<>();
     }
 
     public void crearContacto(String nombre, String apellido, long celular){
-         Contacto contacto = new Contacto()
+         Contacto contacto = new Contacto(nombre, apellido, celular);
 
     }
 
