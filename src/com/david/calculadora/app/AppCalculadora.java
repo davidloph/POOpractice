@@ -15,14 +15,16 @@ public class AppCalculadora {
     public static void main(String[] args) {
         while (true) {
             JCheckBox redondear = new JCheckBox("Redondear");
+
             int opcion = JOptionPane.showOptionDialog(null, "Selecciona una operación",
                     "POO - Calculadora", 0,0, ICONO,
                     Arrays.asList("Sumar", "Restar", "Multiplicar", "Dividir", redondear).toArray(), null);
+            int n = Integer.parseInt(JOptionPane.showInputDialog("¿Cuántos números deseas ingresar?"));
             if (opcion == JOptionPane.CLOSED_OPTION) {
                 System.exit(0);
             }
 
-            double numero1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor 1"));
+            double numero1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese un valor 1"));
             double numero2 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor 2"));
             double resultado = 0;
 

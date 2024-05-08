@@ -15,7 +15,7 @@ public class AppPPT {
     public static final ImageIcon ICONO = new ImageIcon(AppPPT.class.getResource("pptlog.png"));
 
     public static void main(String[] args) {
-        String[] opciones = {"Piedra", "Papel", "Tijera"};
+        String[] opciones = {"Piedra", "Papel", "Tijera", "Navaja"};
         int ganado = 0;
         int perdido = 0;
         int empate = 0;
@@ -33,7 +33,7 @@ public class AppPPT {
                 Instrucciones.instrucciones();
             } else if (opcion == JUGAR) {
                 int user = Juego.jugar();
-                if (user == 0 && bot == 2 || user == 1 && bot == 0 || user == 2 && bot == 1) {
+                if (user == 0 && bot == 2 || user == 1 && bot == 0 || user == 2 && bot == 1 || user == 0 && bot == 3 || user == 2 && bot == 3) {
                     JOptionPane.showMessageDialog(null
                             , "Tú seleccionaste: "+ opciones[user] + "\nLa computadora: "+ opciones[bot] + "\n\n\n\n¡GANASTE!"
                             , "POO - Piedra, Papel o Tijera"
